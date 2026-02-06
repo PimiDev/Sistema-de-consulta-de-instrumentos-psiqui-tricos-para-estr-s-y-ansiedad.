@@ -74,7 +74,7 @@ public class Instrumento {
     public void setValidez(boolean validez) {this.validez = validez;}
 
     public String toString(){
-        return "Instrumento {" +
+        return "<----Instrumento---->\n" +
                 "clave=" + clave +
                 ", \n nombre='" + nombre + '\'' +
                 ", \n tipo=" + tipo +
@@ -83,7 +83,19 @@ public class Instrumento {
                 ", \n autor(es)='" + autores + '\'' +
                 ", \n confiabilidad=" + (confianza ? "Sí" : "No") +
                 ", \n validez=" + (validez ? "Sí" : "No") +
-                ", \n cita='" + citaDeEvaluacion + '\'' +
-                '}';
+                ", \n cita='" + citaDeEvaluacion + '\'';
     }
+
+    public String toFileString() {
+        return clave + "|" +
+                nombre + "|" +
+                condicion + "|" +
+                forma + "|" +
+                tipo + "|" +
+                autores + "|" +
+                confianza + "|" +
+                validez + "|" +
+                citaDeEvaluacion;
+    }
+
 }
