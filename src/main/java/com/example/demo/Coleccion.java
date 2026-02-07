@@ -52,7 +52,7 @@ public class Coleccion {
     }
     public List <Instrumento>consultarPorCondicion(Instrumento.Condicion condicion){
      return instrumentos.stream()
-             .filter(ins -> ins.getForma().equals(condicion))
+             .filter(ins -> ins.getCondicion().equals(condicion))
              .toList();
     }
     public List <Instrumento>consultarPorForma(Instrumento.Forma forma){
